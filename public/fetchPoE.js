@@ -1,5 +1,5 @@
 export async function getData(ligaAtiva,categoriaAtiva){
-    const url = `http://localhost:3000/api/poe2/exchange?league=${ligaAtiva}&type=${categoriaAtiva}`
+    const url = `/api/poe2/exchange?league=${ligaAtiva}&type=${categoriaAtiva}`
 
     try{
         const response = await fetch(url);
@@ -8,6 +8,7 @@ export async function getData(ligaAtiva,categoriaAtiva){
         }
 
         const result = await response.json();
+        console.log(result)
         return result;
     }
     catch(error){

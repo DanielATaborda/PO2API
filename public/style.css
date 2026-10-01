@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-card-item: rgb(16, 16, 16);
+    --cor-card-texto-primario: rgb(255, 255, 255);
+    --cor-card-texto-secundario: rgb(25, 25, 25);
+    --cor-card-texto-terciario: rgb(95, 95, 95);
+    --cor-card-texto-gold: rgb(177, 141, 14);
+    --cor-card-texto-amarelo-ovo: rgb(255, 225, 124);
+    --cor-card-borda: rgba(112, 91, 14, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cinzel";
+}
+
+body {
+    padding: 0 10px;
+    background-color: rgb(12, 12, 12);
+}
+
+.header {
+    padding: 20px 0;
+    font-size: 28px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.header img {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    padding: 20px 0;
+    object-fit: fill;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 65%, transparent 100%);
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    line-height: 1;
+    background-image: url('https://images.freecreatives.com/wp-content/uploads/2016/01/High-Quality-Shiny-Brushed-Gold-Metallic-Texture.jpg'),
+                    linear-gradient(180deg,
+                            #fff09b 0%,
+                            #f3d162 30%,
+                            #c9a96e 55%,
+                            #8b6a36 85%);
+    -webkit-background-clip: text;
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.04),
+        0 6px 20px rgba(0, 0, 0, 0.6);
+    background-blend-mode: lighten;
+}
+
+.logo img{
+    object-fit: cover;
+}
+
+.logo-right {
+    font-size: 14px;
+}
+
+.logo-right p+p {
+    margin-left: 10px;
+}
+
+.logo-right p+p+p {
+    margin-left: 20px;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navegacao input {
+    background: none;
+    border: 1px solid var(--cor-card-texto-terciario);
+    color: var(--cor-card-texto-primario);
+    font-size: 12px;
+    border-radius: 10px;
+    height: 40px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.navegacao input::placeholder {
+    font-size: 10px;
+}
+
+.navegacao-ligas,
+.navegacao-categorias {
+    height: 40px;
+    min-width: 120px;
+}
+
+.navegacao-ordenacao {
+    height: 40px;
+    min-width: 120px;
+}
+
+.navegacao-ligas,
+.navegacao-categorias,
+.navegacao-ordenacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--cor-card-texto-primario);
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--cor-card-texto-terciario);
+}
+
+.navegacao-ligas p,
+.navegacao-categorias p,
+.navegacao-ordenacao p,
+.navegacao-atualizar p {
+    font-size: 8px;
+    margin-top: 5px;
+    padding: 0px 5px;
+}
+
+.navegacao select {
+    -webkit-appearance: none;
+    background: none;
+    color: var(--cor-card-texto-primario);
+    border: none;
+    font-size: 8px;
+    transition: 0.4s;
+}
+
+.navegacao select,
+::picker(select) {
+    appearance: base-select;
+    padding: 5px;
+}
+
+select::picker-icon {
+    color: var(--cor-card-texto-terciario);
+    transition: 0.4s rotate;
+}
+
+select:open::picker-icon {
+    rotate: 180deg;
+}
+
+.navegacao-atualizar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--cor-card-texto-primario);
+    border: 1px solid var(--cor-card-borda);
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+
+.navegacao-atualizar p {
+    font-size: 12px;
+    color: var(--cor-card-texto-amarelo-ovo);
+}
+
+.svg-atualizar {
+    height: 25px;
+}
+
+.navegacao-atualizar svg {
+    fill: var(--cor-card-texto-amarelo-ovo);
+}
+
+.navegacao-atualizar:hover {
+    scale: 1.02;
+}
+
+.navegacao-atualizar:hover .svg-atualizar {
+    position: relative;
+    animation: 2s ease-in-out 1s infinite running rotacao;
+}
+
+@keyframes rotacao {
+    0% {
+        transform: rotateZ(0deg)
+    }
+
+    100% {
+        transform: rotateZ(360deg)
+    }
+}
+
+hr {
+    border:0;
+    height: 1px;
+    margin: 15px 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), #fff, rgba(0, 0, 0, 0));
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-card-item);
+    border: 1px solid var(--cor-card-borda);
+    padding: 0px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:0.2s;
+    position:relative;
+}
+
+.card-item:hover {
+    box-shadow: inset 0px 0px 6px 0px rgba(255, 209, 56, 0.6), inset 0px 0px 6px 0px rgba(255, 206, 47, 0.6);
+}
+
+.mais-info{
+    position:absolute;
+    fill: #eeb808;
+    right: 10px;
+    bottom:10px;
+}
+
+.card-item-nome {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-item-nome img {
+    min-width: 50px;
+}
+
+.card-item-descricao,
+.card-item-categoria {
+    color: var(--cor-card-texto-primario);
+}
+
+.card-item-descricao {
+    font-size: 12px;
+}
+
+.card-item-descricao>h3 {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.card-item-descricao h3:hover {
+    color: var(--cor-card-texto-terciario);
+}
+
+.card-item-categoria {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 34%;
+}
+
+.card-item-categoria>p {
+    font-size: 16px;
+}
+
+.card-item-descricao>p {
+    display: inline-block;
+    border: 1px solid var(--cor-card-borda);
+    color: var(--cor-card-texto-gold);
+    border-radius: 50px;
+    padding: 5px 20px;
+    font-size: 8px;
+    margin: 5px 0;
+}
+
+.card-item-precos {
+    font-size: 13px;
+}
+
+.card-item-precos strong{
+    transition: 0.5s;
+}
+
+.preco-unitario{
+    font-size: 10px;
+}
+
+.valorEmDivine{
+    display: flex;
+    align-items: center;
+    gap:5px;
+    color:var(--cor-card-texto-gold);
+    font-size: 20px;
+}
+
+.taxaInversa {
+    cursor: pointer;
+    color: var(--cor-card-texto-primario);
+    transition: 0.5s;
+    font-size: 12px;
+}
+
+.taxaInversa > strong{
+    color: var(--cor-card-texto-terciario);
+}
+
+.card-item-precos strong:hover {
+    cursor: pointer;
+    color: var(--cor-card-texto-primario);
+}
+
+.linha-vertical {
+    border: none;
+    border-left: 1px solid rgb(255, 255, 255, 0.1);
+    height: 8vh;
+    width: 1px;
+}
+
+footer {
+    padding: 20px;
+}

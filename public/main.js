@@ -19,8 +19,6 @@ function estruturarDados(items,linhas){
     });
 }
 
-
-
 async function atualizarInterface(liga,categoria){
     const data = await getData(liga,categoria);
     const items = data?.items
@@ -48,6 +46,17 @@ botaoAtualizar.addEventListener('click',async ()=>{
     ligaAtiva = ligas.value;
     categoriaAtiva = categoria.value;
     await atualizarInterface(ligaAtiva,categoriaAtiva);
+});
+
+const container = document.getElementById("container");
+const card = document.getElementById("card");
+
+let listaCard = [];
+let cards = container.childNodes;
+console.log(cards.length)
+listaCard.push(cards)
+cards.forEach(item =>{
+    console.log(item)
 })
 
 
