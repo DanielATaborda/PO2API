@@ -9,10 +9,6 @@ Marque `[x]` ao concluir. Agentes: trabalhem na **primeira fase com itens penden
 ### 🎯 Versão 1.0 — primeiro lançamento (escopo definido pelo dev em 2026-09-30)
  
 Funcionalidades:
-- [ ] 🚧 *(passo 1 entregue em 2026-09-30; o dev ainda não aplicou. Aplicar por edições pontuais, sem substituir o `render.js` inteiro, porque o dev já adicionou o bloco de detalhes do card)* Lista unificada (item e preço no mesmo objeto; casar por id se o JSON permitir). **Pré-requisito** de ordenação, busca e detalhes
-- [ ] Ordenação **crescente e decrescente** por preço *(o select só tem "Menor Preço"; faltam as opções de maior preço)*
-- [ ] **Busca (filtro) por nome** *(o `<input>` ainda não tem `id` e está com `type="Procure aqui"`, que é inválido; ajustar para `type="search"` e dar um `id`)*
-- [ ] 🚧 *(a expansão já funciona ao clicar no card, com a troca do `MutationObserver` por um clique no container concluída; layout novo a definir pelo dev (A e B descartados); depois, ligar os valores reais e fazer o gráfico (estilo aprovado))* **Card que expande** com detalhes. Conteúdo proposto, com campos de `lines` já disponíveis: variação em 7 dias, mini gráfico (`sparkline`), volume e moeda de maior volume (ver `[API]` e `[PENDENCIAS]`) *(gráfico em SVG já feito pelo dev; o traço ainda não aparece, correção indicada em 2026-09-30)*
 - [ ] **Cores dos selos** (15 categorias; ver `[API]`)
 - [ ] **Loading e erro** (e mensagem de "nenhum item encontrado")
 Lançamento:
